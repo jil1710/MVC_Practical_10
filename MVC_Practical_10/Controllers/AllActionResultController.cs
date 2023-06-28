@@ -29,7 +29,8 @@ namespace MVC_Practical_10.Controllers
 
         public FileContentResult FileContentResult()
         {
-            var file  = System.IO.File.ReadAllBytes("~/Content/File.txt");
+            //var file  = System.IO.File.ReadAllBytes("~/Content/File.txt");
+            var file = System.IO.File.ReadAllBytes(Server.MapPath("~/Content/File.txt"));
             return new FileContentResult(file, "text/plain");
         }
 
